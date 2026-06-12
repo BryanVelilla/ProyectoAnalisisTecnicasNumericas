@@ -1,0 +1,42 @@
+.wrapper { display: flex; flex-direction: column; gap: var(--space-2); }
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+}
+
+.selectWrapper { position: relative; }
+
+.select {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 var(--space-8) 0 var(--space-3);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.select:hover { border-color: var(--color-border-strong); }
+.select:focus { border-color: var(--color-accent); box-shadow: var(--shadow-focus); }
+.select.error { border-color: var(--color-error); }
+
+.chevron {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  pointer-events: none;
+}
+
+.helper  { font-size: var(--text-xs); color: var(--color-text-muted); }
+.errorMsg{ font-size: var(--text-xs); color: var(--color-error); }

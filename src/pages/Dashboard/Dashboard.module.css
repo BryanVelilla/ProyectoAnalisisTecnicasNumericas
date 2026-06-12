@@ -1,0 +1,31 @@
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 1280px) {
+  .methodGrid { grid-template-columns: repeat(3, 1fr); }
+  .kpiGrid    { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .methodGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .methodGrid  { grid-template-columns: 1fr; }
+  .kpiGrid     { grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .kpiGrid     { margin-bottom: var(--space-6); }
+}
+
+@media (max-width: 400px) {
+  .kpiGrid { grid-template-columns: 1fr; }
+}

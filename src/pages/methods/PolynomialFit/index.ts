@@ -1,0 +1,1 @@
+export { PolynomialFit } from './PolynomialFit';

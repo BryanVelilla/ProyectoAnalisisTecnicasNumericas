@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ─────────────────────────────────────────────────────────────
+     PALETTE  (60 / 30 / 10 rule)
+     60 % →  warm cream whites  — backgrounds, surfaces
+     30 % →  deep purple        — sidebar, primary text, structure
+     10 % →  rose-mauve         — CTAs, active states, accents
+  ───────────────────────────────────────────────────────────── */
+
+  /* ─── Brand Colors ─────────────────────────────────────────── */
+  --color-primary:      #190019;   /* near-black purple  */
+  --color-secondary:    #2B124C;   /* deep indigo        */
+  --color-accent:       #522B5B;   /* rose-purple CTA    */
+  --color-accent-soft:  #854F6C;   /* muted rose accent  */
+
+  /* Semantic */
+  --color-success:      #059669;
+  --color-warning:      #D97706;
+  --color-error:        #DC2626;
+
+  /* ─── Purple scale  (30 % structural + 10 % accent) ────────── */
+  --color-primary-950:  #190019;
+  --color-primary-900:  #2B124C;
+  --color-primary-800:  #3D1A5A;
+  --color-primary-700:  #522B5B;
+  --color-primary-600:  #6B3A6B;
+  --color-primary-500:  #854F6C;
+  --color-primary-400:  #A87087;
+  --color-primary-300:  #C99BA6;
+  --color-primary-200:  #DFB6B2;
+  --color-primary-100:  #EDD5D0;
+  --color-primary-50:   #F9EDE8;
+
+  /* ─── Neutral scale  (60 % backgrounds, warm-tinted greys) ─── */
+  --color-neutral-950:  #190019;
+  --color-neutral-900:  #2B124C;
+  --color-neutral-800:  #4A2D56;
+  --color-neutral-700:  #6B4D75;
+  --color-neutral-600:  #8B6A7A;
+  --color-neutral-500:  #AE93A0;
+  --color-neutral-400:  #CEB5AD;
+  --color-neutral-300:  #E2D0CA;
+  --color-neutral-200:  #EDE3DF;
+  --color-neutral-100:  #F3EDEA;
+  --color-neutral-50:   #FFFFFF;
+
+  /* ─── Semantic Colors ────────────────────────────────────────── */
+  --color-bg-primary:   #F9F4F1;   /* 60 %  page canvas             */
+  --color-bg-secondary: #F3EDEA;   /* 60 %  subtle panel rows       */
+  --color-bg-tertiary:  #EDE3DF;   /* 60 %  hover / pressed states  */
+  --color-surface:      #FFFFFF;   /* 60 %  card surfaces           */
+  --color-surface-hover:#F9F4F1;
+  --color-border:       #E2D0CA;   /* warm light border             */
+  --color-border-strong:#CEB5AD;
+
+  --color-text-primary:   #190019;   /* deep near-black purple        */
+  --color-text-secondary: #4A2D56;   /* mid purple                    */
+  --color-text-muted:     #8B6A7A;   /* muted rose-purple             */
+  --color-text-inverse:   #FFFFFF;
+
+  /* ─── Typography ─────────────────────────────────────────────── */
+  --font-heading:  'Montserrat', 'Segoe UI', sans-serif;
+  --font-body:     'Montserrat', 'Segoe UI', sans-serif;
+  --font-mono:     'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   1.875rem;
+  --text-4xl:   2.25rem;
+  --text-5xl:   3rem;
+
+  --font-regular:   400;
+  --font-medium:    500;
+  --font-semibold:  600;
+  --font-bold:      700;
+  --font-extrabold: 800;
+
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+
+  /* ─── Spacing ────────────────────────────────────────────────── */
+  --space-1:    0.25rem;
+  --space-2:    0.5rem;
+  --space-3:    0.75rem;
+  --space-4:    1rem;
+  --space-5:    1.25rem;
+  --space-6:    1.5rem;
+  --space-7:    1.75rem;
+  --space-8:    2rem;
+  --space-10:   2.5rem;
+  --space-12:   3rem;
+  --space-14:   3.5rem;
+  --space-16:   4rem;
+  --space-20:   5rem;
+  --space-24:   6rem;
+
+  /* ─── Border Radius ──────────────────────────────────────────── */
+  --radius-sm:   0.25rem;
+  --radius-base: 0.375rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* ─── Shadows  (warm-tinted) ─────────────────────────────────── */
+  --shadow-xs:    0 1px 2px 0 rgb(25 0 25 / 0.06);
+  --shadow-sm:    0 1px 3px 0 rgb(25 0 25 / 0.09), 0 1px 2px -1px rgb(25 0 25 / 0.06);
+  --shadow-md:    0 4px 6px -1px rgb(25 0 25 / 0.08), 0 2px 4px -2px rgb(25 0 25 / 0.06);
+  --shadow-lg:    0 10px 15px -3px rgb(25 0 25 / 0.09), 0 4px 6px -4px rgb(25 0 25 / 0.06);
+  --shadow-xl:    0 20px 25px -5px rgb(25 0 25 / 0.10), 0 8px 10px -6px rgb(25 0 25 / 0.08);
+  --shadow-2xl:   0 25px 50px -12px rgb(25 0 25 / 0.22);
+  --shadow-focus: 0 0 0 3px rgba(82, 43, 91, 0.28);
+  --shadow-focus-error: 0 0 0 3px rgba(220, 38, 38, 0.25);
+
+  /* ─── Layout ──────────────────────────────────────────────────── */
+  --sidebar-width:          260px;
+  --sidebar-collapsed-width: 72px;
+  --header-height:           60px;
+  --footer-height:           44px;
+
+  /* ─── Transitions ─────────────────────────────────────────────── */
+  --transition-fast:   150ms ease;
+  --transition-base:   200ms ease;
+  --transition-slow:   300ms ease;
+  --transition-slower: 500ms ease;
+}

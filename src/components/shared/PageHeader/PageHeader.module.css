@@ -1,0 +1,82 @@
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.left { display: flex; align-items: flex-start; gap: var(--space-4); }
+
+.iconWrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid;
+}
+
+.iconWrapper.blue   { background: var(--color-primary-50);  border-color: var(--color-primary-200); color: var(--color-accent); }
+.iconWrapper.green  { background: #ECFDF5; border-color: #A7F3D0; color: #059669; }
+.iconWrapper.orange { background: #FFFBEB; border-color: #FDE68A; color: #D97706; }
+.iconWrapper.purple { background: var(--color-primary-50); border-color: var(--color-primary-200); color: var(--color-accent); }
+
+.text { min-width: 0; }
+
+.eyebrow {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-2);
+}
+
+.formula {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-secondary);
+  background: var(--color-primary-50);
+  border: 1px solid var(--color-primary-100);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 600px;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .wrapper     { flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-6); padding-bottom: var(--space-4); }
+  .title       { font-size: var(--text-xl); }
+  .iconWrapper { width: 2.75rem; height: 2.75rem; }
+  .actions     { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+}

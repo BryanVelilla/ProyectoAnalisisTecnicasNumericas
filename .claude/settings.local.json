@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm verify_temp.cjs verify_full.cjs verify_temp.mjs 2>/dev/null; echo \"cleaned\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({**d.get\\('dependencies',{}\\), **d.get\\('devDependencies',{}\\)}, indent=2\\)\\)\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\marie\\ProyectoAnalisis"
+    ]
+  }
+}

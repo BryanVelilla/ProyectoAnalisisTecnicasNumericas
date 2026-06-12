@@ -1,0 +1,50 @@
+.root {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-bg-primary);    /* 60 % warm cream canvas */
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.content {
+  padding: var(--space-8);
+  max-width: 1440px;
+  margin: 0 auto;
+  animation: fadeInUp 250ms ease both;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 0, 25, 0.45);
+  z-index: 499;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: fadeIn 150ms ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 1024px) {
+  .content { padding: var(--space-6); }
+}
+
+@media (max-width: 767px) {
+  .content { padding: var(--space-4); }
+}
+
+@media (max-width: 480px) {
+  .content { padding: var(--space-3); }
+}

@@ -1,0 +1,1 @@
+export { LogarithmicFit } from './LogarithmicFit';

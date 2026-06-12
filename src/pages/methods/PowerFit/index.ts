@@ -1,0 +1,1 @@
+export { PowerFit } from './PowerFit';

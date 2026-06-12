@@ -1,0 +1,159 @@
+.header {
+  height: var(--header-height);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  gap: var(--space-4);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ─── Left ─── */
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.breadcrumbItem {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.breadcrumbItem.active {
+  color: var(--color-text-primary);
+  font-weight: var(--font-semibold);
+}
+
+.breadcrumbSep {
+  color: var(--color-neutral-400);
+  font-size: var(--text-sm);
+}
+
+/* ─── Right ─── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.statusPill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-success);
+  animation: pulse 2s ease infinite;
+}
+
+.divider {
+  width: 1px;
+  height: 1.5rem;
+  background: var(--color-border);
+}
+
+/* Solid colour avatar — no gradient */
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);        /* 10 %  rose-purple solid */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 2px solid var(--color-primary-200);
+}
+
+.iconBtn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  background: transparent;
+  border: none;
+  position: relative;
+}
+.iconBtn:hover { background: var(--color-bg-tertiary); color: var(--color-text-primary); }
+
+.notificationDot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-error);
+  border: 1.5px solid var(--color-surface);
+}
+
+/* ─── Hamburger (mobile only) ────────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+.hamburger:hover { background: var(--color-bg-tertiary); color: var(--color-text-primary); }
+
+/* ─── Mobile responsive ──────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .hamburger { display: flex; }
+
+  .header { padding: 0 var(--space-4); gap: var(--space-2); }
+
+  .statusPill { display: none; }
+
+  /* Keep only the first breadcrumb segment (current page title) */
+  .breadcrumbSep { display: none; }
+  .breadcrumbItem:not(.active) { display: none; }
+}
+
+@media (max-width: 480px) {
+  .right { gap: var(--space-2); }
+  .divider { display: none; }
+}

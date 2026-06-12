@@ -1,0 +1,1 @@
+export { MethodCard } from './MethodCard';
