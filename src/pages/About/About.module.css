@@ -64,6 +64,14 @@
   padding: var(--space-6);
 }
 
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
 .cardTitle {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
@@ -78,6 +86,85 @@
   line-height: var(--leading-relaxed);
   max-width: 600px;
   margin-bottom: var(--space-5);
+}
+
+.cardHeader .cardTitle,
+.cardHeader .cardDesc {
+  margin-bottom: 0;
+}
+
+.cardHeader .cardDesc {
+  margin-top: var(--space-2);
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-secondary);
+}
+
+.detailIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-50);
+  border: 1px solid var(--color-primary-100);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.detailLabel {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.detailValue {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.purposeBox {
+  margin-top: var(--space-5);
+  padding: var(--space-5);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-xl);
+  background: var(--color-primary-50);
+}
+
+.purposeTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-2);
+}
+
+.purposeText {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: 0;
 }
 
 /* ─── Method list ─── */
@@ -137,4 +224,6 @@
 
 @media (max-width: 768px) {
   .infoGrid { grid-template-columns: 1fr; }
+  .cardHeader { flex-direction: column; }
+  .detailsGrid { grid-template-columns: 1fr; }
 }
